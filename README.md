@@ -1,5 +1,5 @@
 # BIG BANK
-O projeto consiste em um programa desenvolvido em linguagem C que simula uma plataforma bancária online, na qual é possível consultar o saldo, realizar transferências, fazer investimentos, pagar contas, fazer empréstimo e solicitar cartões de débito e crédito.
+O projeto consiste em um programa desenvolvido em linguagem C que simula uma plataforma bancária online, na qual é possível consultar saldo, realizar transferências, fazer investimentos, pagar contas, fazer empréstimo e solicitar cartões de débito e crédito.
 
 Objetivo: Entender o funcionamento de uma plataforma bancária e criar soluções para as necessidades da população.
 
