@@ -50,7 +50,7 @@ printf("\t\t\t   ^~^~                                     ~^~^\n");_sleep(200);
 
         printf("1 ---> Abra sua conta\n");
         printf("2 ---> Acesse sua conta\n");
-        printf("\nDigite sua opção: \n->");
+        printf("\nDigite sua opÃ§Ã£o: \n->");
         scanf("%d", &menu_principal);
         switch(menu_principal)
         {
@@ -61,7 +61,7 @@ printf("\t\t\t   ^~^~                                     ~^~^\n");_sleep(200);
         		fflush(stdin);gets(nome);
         		printf("\nDigite seu CPF: ");
         		fflush(stdin);gets(cpf);
-        		printf("\nDigite seu nome de usuário(Ele deve estar no formato nome.sobrenome): ");
+        		printf("\nDigite seu nome de usuÃ¡rio(Ele deve estar no formato nome.sobrenome): ");
         		fflush(stdin);gets(usuario);
         		printf("\nDigite sua senha(Ela deve conter 4 caracteres): ");
         		//fflush(stdin);gets(senha);
@@ -82,7 +82,7 @@ printf("\t\t\t   ^~^~                                     ~^~^\n");_sleep(200);
         	case 2:
         		_sleep(300);
     			system("cls");
-        		printf("Digite seu usuário: ");
+        		printf("Digite seu usuÃ¡rio: ");
         		fflush(stdin);gets(usuario_acesso);
         		printf("\nDigite sua senha: \n");
         		//fflush(stdin);gets(senha_acesso);
@@ -106,7 +106,7 @@ printf("\t\t\t   ^~^~                                     ~^~^\n");_sleep(200);
 				}
 				else 
 				{
-					printf("\nUsuário ou senha inválidos.");
+					printf("\nUsuÃ¡rio ou senha invÃ¡lidos.");
 				}	
 				break;	
 		}   
@@ -114,7 +114,7 @@ printf("\t\t\t   ^~^~                                     ~^~^\n");_sleep(200);
 		return 0;
 }
 
-//Entrar na função Conta 
+//Entrar na funÃ§Ã£o Conta 
 void AcessarConta()
 {
 	int menu_conta;
@@ -124,13 +124,13 @@ void AcessarConta()
         printf("\tBIG BANK\n");
         printf("\n1-----> Depositar dinheiro");
         printf("\n2-----> Consultar o saldo");
-        printf("\n3-----> Fazer um empréstimo");
+        printf("\n3-----> Fazer um emprÃ©stimo");
         printf("\n4-----> Investir seu dinheiro");
-        printf("\n5-----> Solicitar cartão de débito e crédito");
+        printf("\n5-----> Solicitar cartÃ£o de dÃ©bito e crÃ©dito");
         printf("\n6-----> Pagar contas");
         printf("\n7-----> Transferir dinheiro");
         printf("\n0-----> Sair");
-        printf("\nInsira aqui:\n-> ");
+        printf("\n\nInsira aqui:\n-> ");
         scanf("%d", &menu_conta);
         switch(menu_conta)
         {
@@ -162,7 +162,7 @@ void AcessarConta()
 		}while(menu_conta!=0);
 }
 
-//Entrar na Função Depositar
+//Entrar na FunÃ§Ã£o Depositar
 void Depositar()
 {
 	int menu_deposito, resposta;
@@ -173,20 +173,20 @@ void Depositar()
 		system("color 0F");
 	    printf("\n Digite a quantidade que deseja depositar na conta: R$ ");
 	    scanf("%f",&valor_deposito);
-	    printf("\n Confirme o depósito de R$%2.f: \n 1 - Sim  2 - Não \n-> ", valor_deposito);
+	    printf("\n Confirme o depÃ³sito de R$%2.f: \n 1 - Sim  2 - NÃ£o \n-> ", valor_deposito);
 	    scanf("%i", &menu_deposito);
 		switch( menu_deposito)
 	   {
 	      case 1:
-		     printf("\nDepósito de R$%2.f confirmado!", valor_deposito);
+		     printf("\nDepÃ³sito de R$%2.f confirmado!", valor_deposito);
 		     saldo+= valor_deposito;
-  		   	 //printf("\n O saldo da conta é: %.2f", saldo);
+  		   	 //printf("\n O saldo da conta Ã©: %.2f", saldo);
 		  break;
 	      case 2:
-		     printf("\nDepósito cancelado");
+		     printf("\nDepÃ³sito cancelado");
 		  break;
 	    }	 
-	    printf("\n\nDeseja fazer novo depósito 1-Sim  2-Não :\n->");
+	    printf("\n\nDeseja fazer novo depÃ³sito 1-Sim  2-NÃ£o :\n->");
 	    scanf("%i", &resposta);
 		   
 	}while( resposta==1);	
@@ -198,8 +198,8 @@ void ConsultarSaldo()
 {
 	system("cls");
 	printf("\n\t\t CONSULTA DE SALDO");
-	printf("\n O saldo da conta conta corrente é de: %.2f", saldo);
-	printf("\n O saldo da conta poupança é de: %.2f", valor_investimento);
+	printf("\n O saldo da conta conta corrente Ã© de: %.2f", saldo);
+	printf("\n O saldo da conta poupanÃ§a Ã© de: %.2f", valor_investimento);
 	getch();
 }
 
@@ -212,37 +212,37 @@ void Transferir()
     float valor_transferido;
     int confirma;
     system("cls");
-	    printf("\n Selecione o tipo de conta para a qual deseja realizar a transferência: ");
-	    printf("\n 1 - Conta poupança \n 2 - Conta corrente ");
-	    printf("\nDigite sua opção: \n-> ");
+	    printf("\n Selecione o tipo de conta para a qual deseja realizar a transferÃªncia: ");
+	    printf("\n 1 - Conta poupanÃ§a \n 2 - Conta corrente ");
+	    printf("\nDigite sua opÃ§Ã£o: \n-> ");
         scanf("%d", &conta_transferencia);
 	    switch(conta_transferencia)
 	    {
 		   case 1: 
 		   system("cls");
-		//solicita os digitos da conta poupança e o valor que será transferido 
-		printf("Digite os 9 digitos da conta poupança (Ex: xxxxxxxxxx): ");
+		//solicita os digitos da conta poupanÃ§a e o valor que serÃ¡ transferido 
+		printf("Digite os 9 digitos da conta poupanÃ§a (Ex: xxxxxxxxxx): ");
 		fflush(stdin);gets(conta_poupreceptora);
 		
 		printf("Qual valor deseja transferir para a conta %c: ", conta_poupreceptora);
 		scanf("%f", &valor_transferido);
 		if(valor_transferido>saldo)
 		{
-			printf("Transferência negada. Saldo insuficiente!");
+			printf("TransferÃªncia negada. Saldo insuficiente!");
 		}
 		else
 		{
-				printf("\n Confirma a transferência de %.2f para a conta %c? \n 1 - Sim \n 2 - Não:\n-> ", valor_transferido, conta_poupreceptora);
+				printf("\n Confirma a transferÃªncia de %.2f para a conta %c? \n 1 - Sim \n 2 - NÃ£o:\n-> ", valor_transferido, conta_poupreceptora);
 				scanf("%i",&confirma);
 				
 				if(confirma == 1){
 					
-					printf("\n Transferência realizada com sucesso!");
+					printf("\n TransferÃªncia realizada com sucesso!");
 					saldo-=valor_transferido;
 				} 
 				else {
 					
-					printf("\n Transferência cancelada");
+					printf("\n TransferÃªncia cancelada");
 				}
 	   }
 		break;
@@ -256,20 +256,20 @@ void Transferir()
 		scanf("%f", &valor_transferido);
 		if(valor_transferido>saldo)
 		{
-           printf("Transferência negada. Saldo insuficiente!");
+           printf("TransferÃªncia negada. Saldo insuficiente!");
 	    }
 	    else
 	    {
 		
-				printf("\n Confirma a transferência de %f para a conta %c? \n 1 - Sim \n 2 - Não \n->", valor_transferido, conta_correntereceptora);
+				printf("\n Confirma a transferÃªncia de %f para a conta %c? \n 1 - Sim \n 2 - NÃ£o \n->", valor_transferido, conta_correntereceptora);
 				scanf("%i",&confirma);
 				
 					if(confirma == 1){	
-					printf("\n Transferência realizada com sucesso! :) ");
+					printf("\n TransferÃªncia realizada com sucesso! :) ");
 					saldo-=valor_transferido;
 				} 
 				else {
-					printf("\n Transferência cancelada");
+					printf("\n TransferÃªncia cancelada");
 				}
 		}
 				break;	
@@ -285,20 +285,20 @@ void PagarContas()
 	
 	system("cls");
 	printf("\n Selecione abaixo qual tipo de conta deseja pagar?");
-	printf("\n 1 - Água						    2 - Luz");
+	printf("\n 1 - Ãgua						    2 - Luz");
 	printf("\n 3 - Internet						4 - Mercado");
-	printf("\n 5 - Netflix						6 - Outras(não vinculadas)");
+	printf("\n 5 - Netflix						6 - Outras(nÃ£o vinculadas)");
 	printf("\nInsira aqui:\n-> ");
 	scanf("%i",&sel_conta);
 	
 	switch (sel_conta)
 	{
 		case 1: 
-		printf("\n Você selecionou: conta de água \n Digite o valor da conta de água: R$");
+		printf("\n VocÃª selecionou: conta de Ã¡gua \n Digite o valor da conta de Ã¡gua: R$");
 		scanf("%f",&valor_conta);
 		printf("\n Processando....");
 		sleep(2);
-		printf("\n\n Confirma o pagamento de R$%.2f da conta de água? \n 1 - SIM \n 2 - Não: \n-> ", valor_conta);
+		printf("\n\n Confirma o pagamento de R$%.2f da conta de Ã¡gua? \n 1 - SIM \n 2 - NÃ£o: \n-> ", valor_conta);
 		scanf("%d", &confirma_pagamento);
 		
 		if (confirma_pagamento == 1)
@@ -312,11 +312,11 @@ void PagarContas()
 		break;
 		
 		case 2: 
-		printf("\n Você selecionou: conta de luz \n Digite o valor da conta de luz: R$");
+		printf("\n VocÃª selecionou: conta de luz \n Digite o valor da conta de luz: R$");
 		scanf("%f",&valor_conta);
 		printf("\n Processando....");
 		sleep(2);
-		printf("\n\n Confirma o pagamento de R$%.2f da conta de luz? \n 1 - Sim \n 2 - Não \n->", valor_conta);
+		printf("\n\n Confirma o pagamento de R$%.2f da conta de luz? \n 1 - Sim \n 2 - NÃ£o \n->", valor_conta);
 		scanf("%d", &confirma_pagamento);
 			
 		if (confirma_pagamento == 1)
@@ -330,11 +330,11 @@ void PagarContas()
 		break;
 		
 		case 3: 
-		printf("\n Você selecionou: conta de internet \n Digite o valor da conta de internet: R$");
+		printf("\n VocÃª selecionou: conta de internet \n Digite o valor da conta de internet: R$");
 		scanf("%f",&valor_conta);
 		printf("\n Processando....");
 		sleep(3);
-		printf("\n\n Confirma o pagamento de R$%.2f da conta de internet? \n 1 - Sim \n 2 - Não \n-> ", valor_conta);
+		printf("\n\n Confirma o pagamento de R$%.2f da conta de internet? \n 1 - Sim \n 2 - NÃ£o \n-> ", valor_conta);
 		scanf("%d", &confirma_pagamento);
 			
 		if (confirma_pagamento == 1)
@@ -349,11 +349,11 @@ void PagarContas()
 		break;
 		
 		case 4: 
-		printf("\n Você selecionou: conta de mercado \n Digite o valor da conta de mercado: R$ ");
+		printf("\n VocÃª selecionou: conta de mercado \n Digite o valor da conta de mercado: R$ ");
 		scanf("%f",&valor_conta);
 		printf("\n Processando....");
 		sleep(2);
-		printf("\n\n Confirma o pagamento de R$%.2f da conta de mercado? \n 1 - Sim \n 2 - Não \n->", valor_conta);
+		printf("\n\n Confirma o pagamento de R$%.2f da conta de mercado? \n 1 - Sim \n 2 - NÃ£o \n->", valor_conta);
 		scanf("%d", &confirma_pagamento);
 			
 		if (confirma_pagamento == 1)
@@ -367,11 +367,11 @@ void PagarContas()
 		break;
 		
 		case 5: 
-		printf("\n Você selecionou: conta de netflix \n Digite o valor da conta de netflix: R$ ");
+		printf("\n VocÃª selecionou: conta de netflix \n Digite o valor da conta de netflix: R$ ");
 		scanf("%f",&valor_conta);
 		printf("\n Processando....");
 		sleep(3);
-		printf("\n\n Confirma o pagamento de R$%.2f da conta de netflix? \n 1 - Sim \n 2 - Não \n-> ", valor_conta);
+		printf("\n\n Confirma o pagamento de R$%.2f da conta de netflix? \n 1 - Sim \n 2 - NÃ£o \n-> ", valor_conta);
 		scanf("%d", &confirma_pagamento);
 			
 		if (confirma_pagamento == 1)
@@ -385,13 +385,13 @@ void PagarContas()
 		break;
 		
 		case 6: 
-		printf("\n Você selecionou: outra conta (não vinculada). \n Digite o código de barras da conta:");
+		printf("\n VocÃª selecionou: outra conta (nÃ£o vinculada). \n Digite o cÃ³digo de barras da conta:");
 		fflush(stdin);gets(codigo);
 		printf("\n Digite o valor da conta:R$ ");
 		scanf("%f",&valor_conta);
 		printf("\n\n Processando....");
 		sleep(2);
-		printf("\n\n Confirma o pagamento de R$%.2f \n 1 - Sim \n 2 - Não \n-> ", valor_conta);
+		printf("\n\n Confirma o pagamento de R$%.2f \n 1 - Sim \n 2 - NÃ£o \n-> ", valor_conta);
 		scanf("%d", &confirma_pagamento);
 			
 		if (confirma_pagamento == 1)
@@ -405,7 +405,7 @@ void PagarContas()
 		}
 		break;	
 		default: 
-			printf("\nOpção Inválida\n");
+			printf("\nOpÃ§Ã£o InvÃ¡lida\n");
 		break;
 		
 	}
@@ -418,7 +418,7 @@ void Investir()
 	double juros;
 	int aceitar_investimento;
 	system("cls");
-	printf("\n Bem vindo a poupança!!");
+	printf("\n Bem vindo a poupanÃ§a!!");
 	printf("\n\nDigite o valor que deseja investir R$:");
 	scanf("%f",&valor_investimento);
 	if(valor_investimento>saldo)
@@ -427,12 +427,12 @@ void Investir()
 	}
 	else
 	{
-		printf("\n Deseja completar o investimento? \n 1 - SIM \n 2 - NÃO \n-> ");
+		printf("\n Deseja completar o investimento? \n 1 - SIM \n 2 - NÃƒO \n-> ");
 		scanf("%i",&aceitar_investimento);
 		
 		if (aceitar_investimento == 1 )
 		{
-			printf("\n Parabéns seu investimento foi aprovado!! ");
+			printf("\n ParabÃ©ns seu investimento foi aprovado!! ");
 			saldo-=valor_investimento;
 		}
 		else
@@ -449,31 +449,31 @@ void Emprestar()
 	int meses;
 	int  confirmar_investimento;
 	system("cls");
-	printf("Digite o valor do empréstimo:R$");
+	printf("Digite o valor do emprÃ©stimo:R$");
 	scanf("%f",&valor_emprestimo);
-	printf("O valor do empréstimo será pago após quantos meses? ");
+	printf("O valor do emprÃ©stimo serÃ¡ pago apÃ³s quantos meses? ");
 	scanf("%i",&meses);
 	if(valor_emprestimo>VALMAX)
 	{
-		printf("Empréstimo negado. O valor máximo do empréstimo é de R$2000.00");
+		printf("EmprÃ©stimo negado. O valor mÃ¡ximo do emprÃ©stimo Ã© de R$2000.00");
 	}
 	else
 	{
 	
 		juros=valor_emprestimo*0.10*meses;
 		valor_pagar=valor_emprestimo+juros;
-		printf("\nA taxa de juros a ser cobrada é de 0.1%% ao mês. Você pagará R$:%.2f de juros.",juros);
-		printf("\n\nO valor a ser pago após %i meses será de R$ %.2f",meses,valor_pagar);
-		printf("\nConfirma o empréstimo de R$%.2f a ser pago após %i meses? \n 1- SIM 2- NÃO \n->  ",valor_emprestimo,meses);
+		printf("\nA taxa de juros a ser cobrada Ã© de 0.1%% ao mÃªs. VocÃª pagarÃ¡ R$:%.2f de juros.",juros);
+		printf("\n\nO valor a ser pago apÃ³s %i meses serÃ¡ de R$ %.2f",meses,valor_pagar);
+		printf("\nConfirma o emprÃ©stimo de R$%.2f a ser pago apÃ³s %i meses? \n 1- SIM 2- NÃƒO \n->  ",valor_emprestimo,meses);
 		scanf("%i",&confirmar_investimento);
 		if (confirmar_investimento == 1 )
 		{
-			printf("\n Empréstimo realizado com sucesso!!");
+			printf("\n EmprÃ©stimo realizado com sucesso!!");
 			saldo+=valor_emprestimo;
 		}
 		else
 		{
-			printf("\n Empréstimo cancelado!");
+			printf("\n EmprÃ©stimo cancelado!");
 		}	
     }
 	getch();
@@ -487,70 +487,70 @@ void Solicitar()
 	char cep[10];
 	char casa[5];
 	
-	printf("\n Olá, pronto para solicitar o seu novo cartão?\n Selecione abaixo a opção desejada!");
-	printf("\n 1 - Cartão de crédito \n 2 - Cartão de débito \n 3 - Cartão de débito e crédito \n ");
+	printf("\n OlÃ¡, pronto para solicitar o seu novo cartÃ£o?\n Selecione abaixo a opÃ§Ã£o desejada!");
+	printf("\n 1 - CartÃ£o de crÃ©dito \n 2 - CartÃ£o de dÃ©bito \n 3 - CartÃ£o de dÃ©bito e crÃ©dito \n ");
 	scanf("%i", &opcao_cartao);
 	
 	switch (opcao_cartao)
 	{
 		
 		case 1: 
-		printf("\n Você já conhece o cartão de crédito big bank?\n Com ele é possível parcelar suas compras e pagar apenas no fechamento da fatura!!");
-		printf("\n Deseja prosseguir com a solicitação do cartão de crédito big bank? \n 1 - SIM \n 2 - NÃO \n-> ");
+		printf("\n VocÃª jÃ¡ conhece o cartÃ£o de crÃ©dito big bank?\n Com ele Ã© possÃ­vel parcelar suas compras e pagar apenas no fechamento da fatura!!");
+		printf("\n Deseja prosseguir com a solicitaÃ§Ã£o do cartÃ£o de crÃ©dito big bank? \n 1 - SIM \n 2 - NÃƒO \n-> ");
 		scanf("%i",&aceitar_cartao);
 		
 		if(aceitar_cartao == 1)
 		{	
 		    printf("Digite seu CEP: ");
         	fflush(stdin);gets(cep);
-        	printf("\nDigite o número da sua residência: ");
+        	printf("\nDigite o nÃºmero da sua residÃªncia: ");
         	fflush(stdin);gets(casa);
-			printf("\n Parabéns seu cartão de crédito big bank foi aprovado.\n Em até 7 dias você o receberá em sua residência.");
+			printf("\n ParabÃ©ns seu cartÃ£o de crÃ©dito big bank foi aprovado.\n Em atÃ© 7 dias vocÃª o receberÃ¡ em sua residÃªncia.");
 		}
 		else 
 		{
-			printf("\n Solicitação de cartão de crédito big bank cancelada!");
+			printf("\n SolicitaÃ§Ã£o de cartÃ£o de crÃ©dito big bank cancelada!");
 		}
 		break;
 		
 		case 2:
-		printf("\n Você já conhece o cartão de débito big bank?\n Com ele é possível fazer compras a qualquer momento em qualquer lugar!!");	
-		printf("\n Deseja prosseguir com a solicitação do cartão de débito big bank? \n 1 - SIM \n 2 - NÃO \n->");
+		printf("\n VocÃª jÃ¡ conhece o cartÃ£o de dÃ©bito big bank?\n Com ele Ã© possÃ­vel fazer compras a qualquer momento em qualquer lugar!!");	
+		printf("\n Deseja prosseguir com a solicitaÃ§Ã£o do cartÃ£o de dÃ©bito big bank? \n 1 - SIM \n 2 - NÃƒO \n->");
 		scanf("%i",&aceitar_cartao);
 		if(aceitar_cartao == 1)
 		{
 			printf("Digite seu CEP: ");
         	fflush(stdin);gets(cep);
-        	printf("\nDigite o número da sua residência: ");
+        	printf("\nDigite o nÃºmero da sua residÃªncia: ");
         	fflush(stdin);gets(casa);
-			printf("\n Parabéns seu cartão de débito big bank foi aprovado. \n Em até 7 dias você receberá ele em sua residência.");
+			printf("\n ParabÃ©ns seu cartÃ£o de dÃ©bito big bank foi aprovado. \n Em atÃ© 7 dias vocÃª receberÃ¡ ele em sua residÃªncia.");
 			
 		}
 		else
 		{
-			printf("\n Solicitação de cartão de débito big bank cancelada!");
+			printf("\n SolicitaÃ§Ã£o de cartÃ£o de dÃ©bito big bank cancelada!");
 				
 		}
 		break;
 		
 		case 3:
-		printf("\nVocê já conhece o cartão de crédito e débito big bank?");
-		printf("\nCom ele é possível fazer compras a qualquer momento em qualquer lugar e ainda parcelar suas compras e pagar apenas no fechamento da fatura!!");
-		printf("\n Deseja prosseguir com a solicitação do cartão crédito e débito big bank? \n 1 - SIM \n 2 - NÃO \n->");
+		printf("\nVocÃª jÃ¡ conhece o cartÃ£o de crÃ©dito e dÃ©bito big bank?");
+		printf("\nCom ele Ã© possÃ­vel fazer compras a qualquer momento em qualquer lugar e ainda parcelar suas compras e pagar apenas no fechamento da fatura!!");
+		printf("\n Deseja prosseguir com a solicitaÃ§Ã£o do cartÃ£o crÃ©dito e dÃ©bito big bank? \n 1 - SIM \n 2 - NÃƒO \n->");
 		scanf("%i",&aceitar_cartao);
 		
 		if(aceitar_cartao == 1)
 		{
 			printf("Digite seu CEP: ");
         	fflush(stdin);gets(cep);
-        	printf("\nDigite o número da sua residência: ");
+        	printf("\nDigite o nÃºmero da sua residÃªncia: ");
         	fflush(stdin);gets(casa);
-			printf("\n Parabéns seu cartão de crédito e débito big bank foi aprovado.\n Em até 7 dias você o receberá em sua residência.");
+			printf("\n ParabÃ©ns seu cartÃ£o de crÃ©dito e dÃ©bito big bank foi aprovado.\n Em atÃ© 7 dias vocÃª o receberÃ¡ em sua residÃªncia.");
 			
 		}
 		else 
 		{
-			printf("\n Solicitação de cartão de débito e crédito big bank cancelada!");
+			printf("\n SolicitaÃ§Ã£o de cartÃ£o de dÃ©bito e crÃ©dito big bank cancelada!");
 				
 		}
 		break;
@@ -563,11 +563,11 @@ void verificaSaldo(float *valor)
 {
 		if(*valor > saldo)
 		{
-			printf("Operação negada. Saldo insuficiente!");
+			printf("OperaÃ§Ã£o negada. Saldo insuficiente!");
 		}
 		else 
 		{
-			printf("\n Pagamento concluído!");
+			printf("\n Pagamento concluÃ­do!");
 			saldo = saldo - *valor;
 	    }	
     	getch();
