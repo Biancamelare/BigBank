@@ -9,6 +9,5 @@ Projeto desenvolvimento na Disciplina de Algoritmos e Programação cursada no p
 
 <h2> CRIADORES: </h2>
 
-- Bianca Vitorino de Souza Melaré 
-- Guilherme Tobias Piva	        
+- Bianca Vitorino de Souza Melaré       
 - Isabelle Munhoz Scarso
